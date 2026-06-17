@@ -35,7 +35,7 @@ An end-to-end deep learning repository for American Sign Language (ASL) alphabet
 * **Deduplication:** Incorporates `remove_duplicates_from_folder()` to purge duplicate image profiles, preventing validation data leakage and artificial score inflation.
 * **Dynamic Augmentation:** Leverages `ImageDataGenerator` scaling configurations to inject structural changes (rotations, brightness shifts) to simulate environmental real-world variables.
 
-### 2. Neural Network Design (`model_builder 1.py`)
+### 2. Neural Network Design (`model_builder.py`)
 * **Base Feature Extractor:** Employs **ResNet50** pre-trained on ImageNet ($1\text{M}+$ images). The deep convolutional structures are locked to draw low-level primitives (edges, shapes) and mid-level textures without destroying weight states.
 * **Custom Classification Head:** Integrates a dense feature reduction funnel optimized via manual parameter grid tests:
   * Feature Layer Dropout: `0.4` 
@@ -89,7 +89,8 @@ A multi-dimensional approach was integrated to evaluate performance beyond raw c
 
 ```text
 ├── .gitignore               # Excludes datasets, tuning logs, and large model binaries
+├── .EADME.md                # Project documentation
 ├── class_indices.json       # Structural metadata binding integer indices to A-Z labels
 ├── data_loader.py           # Preprocessing pipeline, duplicate cleaner, and image loader
-├── model_builder 1.py       # Defines the customized ResNet50 architecture and tuner layout
-└── train_model 1.py         # Primary runtime script orchestrating loops, callbacks, and metrics
+├── model_builder.py         # Defines the customized ResNet50 architecture and tuner layout
+└── train_model.py           # Primary runtime script orchestrating loops, callbacks, and metrics
