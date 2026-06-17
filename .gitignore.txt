@@ -1,0 +1,15 @@
+# Python cache files
+__pycache__/
+*.pyc
+
+# Dataset folders containing thousands of images
+ASL_Alphabet_Dataset/
+
+# Keras Tuner results and hyperparameter logs
+hyper_tuning/
+tuning_results/
+
+# Trained model weights and exported architectures
+saved_models/
+*.h5
+*.keras
